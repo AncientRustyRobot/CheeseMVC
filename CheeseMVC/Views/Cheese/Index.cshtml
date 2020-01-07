@@ -1,28 +1,43 @@
-﻿@{
-   
+﻿@model List<CheeseMVC.Models.Cheese>
 
-    
-}
 
 <h1>My Cheeses</h1>
 
-<p><a asp.controller="Cheese" asp-action="Add">Add Cheese </a></p>
-<p><a asp.controller="Cheese" asp-action="Delete">Delete Cheese</a></p>
+<p><a asp.controller="Cheese" asp-action="Add">Add Cheese </a>&nbsp;
+<a asp.controller="Cheese" asp-action="Delete">Delete Cheese</a>
+</p>
 
 
-@if (ViewBag.cheeses.Count == 0)
+@if (Model.Count == 0)
 {
-    <p>No cheeses yet</p>
-}
+    <p>No cheeses yet!</p>
+} 
+<form method="post">
+    <table class="table">
 
-<ul>
-    @foreach(Cheese cheese in ViewBag.cheeses) 
-    { 
+        <tr>
+            <th>Remove</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Rating</th>
+            <th>Edit Cheese</th>
 
-      <li>
-          <h3>@cheese.Name</h3>
-          <p><i>@cheese.Description</i></p>
-      </li>
-    }
+        </tr>
+
+        @foreach (Cheese cheese in Model)
+        {
+            <tr>
+                <td><input name="cheeseIds" type="checkbox" value="@cheese.CheeseId" /></td>
+                <td>@cheese.Name</td>
+                <td>@cheese.Description</td>
+                <td>@cheese.Type</td>
+                <td>@cheese.Rating</td>
+                <td><a asp-controller="Cheese" asp-action="Edit" asp-route-cheeseId="@cheese.CheeseId">Edit</a></td>
+
+            </tr>
+        }
+    </table>
+    <input type="submit" value="Remove Cheese" />
+</form> 
     
-</ul>

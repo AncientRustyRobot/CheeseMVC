@@ -36,3 +36,4 @@ C:\Users\nancy\codecamp\NancyBampo\CheeseMVC\CheeseMVC\obj\Debug\netcoreapp3.1\C
 C:\Users\nancy\codecamp\NancyBampo\CheeseMVC\CheeseMVC\obj\Debug\netcoreapp3.1\Razor\Views\Cheese\Index.cshtml.g.cs
 C:\Users\nancy\codecamp\NancyBampo\CheeseMVC\CheeseMVC\obj\Debug\netcoreapp3.1\Razor\Views\Cheese\Add.cshtml.g.cs
 C:\Users\nancy\codecamp\NancyBampo\CheeseMVC\CheeseMVC\obj\Debug\netcoreapp3.1\Razor\Views\Cheese\Delete.cshtml.g.cs
+C:\Users\nancy\codecamp\NancyBampo\CheeseMVC\CheeseMVC\obj\Debug\netcoreapp3.1\Razor\Views\Cheese\Edit.cshtml.g.cs
