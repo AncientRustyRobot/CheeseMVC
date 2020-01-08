@@ -28,12 +28,12 @@
         @foreach (Cheese cheese in Model)
         {
             <tr>
-                <td><input name="cheeseIds" type="checkbox" value="@cheese.CheeseId" /></td>
+                <td><input name="cheeseIds" type="checkbox" value="@cheese.ID" /></td>
                 <td>@cheese.Name</td>
                 <td>@cheese.Description</td>
                 <td>@cheese.Type</td>
                 <td>@cheese.Rating</td>
-                <td><a asp-controller="Cheese" asp-action="Edit" asp-route-cheeseId="@cheese.CheeseId">Edit</a></td>
+                <td><a asp-controller="Cheese" asp-action="Edit" asp-route-ID="@cheese.ID">Edit</a></td>
 
             </tr>
         }

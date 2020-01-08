@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CheeseMVC.Models;
 using CheeseMVC.ViewModels;
+using CheeseMVC.Data;
     
 
 
@@ -13,14 +14,19 @@ namespace CheeseMVC.Controllers
 {
     public class CheeseController : Controller
     {
-        
-        
 
+
+        private CheeseDbContext context;
+
+        public CheeseController(CheeseDbContext dbContext)
+        {
+            context = dbContext;
+        }
         // GET: /<controller>/
         public IActionResult Index()
         {
             
-            List<Cheese> cheeses = CheeseData.GetAll();
+            List<Cheese> cheeses = context.Cheeses.ToList();
             
 
             return View(cheeses);
@@ -39,7 +45,9 @@ namespace CheeseMVC.Controllers
             {
                 //Add new cheese to existing cheeses         
                 Cheese newCheese = addCheeseViewModel.CreateCheese();
-                CheeseData.Add(newCheese);
+                context.Cheeses.Add(newCheese);
+                context.SaveChanges();
+
                 return Redirect("/cheese");
             }
                 
@@ -53,7 +61,7 @@ namespace CheeseMVC.Controllers
         public IActionResult Delete()
         {
 
-            ViewBag.cheeses = CheeseData.GetAll();
+            ViewBag.cheeses = context.Cheeses.ToList();
             return View();
         }
 
@@ -65,15 +73,18 @@ namespace CheeseMVC.Controllers
         public IActionResult DeleteCheese(int[] cheeseIds)
         {   foreach(int cheeseId in cheeseIds)
             {
-                CheeseData.Remove(cheeseId);
+                Cheese theCheese = context.Cheeses.Single(c => c.ID == cheeseId);
+                context.Cheeses.Remove(theCheese);
             }
+
+            context.SaveChanges();
             
             return Redirect("/Cheese/Index");
         }
 
         public IActionResult Edit(int cheeseId)
         {
-            Cheese ch = CheeseData.GetById(cheeseId);
+            Cheese ch = context.Cheeses.Single(c => c.ID == cheeseId);
             AddEditCheeseViewModel addEditCheeseViewModel = new AddEditCheeseViewModel(ch);
             
             return View(addEditCheeseViewModel);
@@ -85,12 +96,13 @@ namespace CheeseMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                Cheese ch = CheeseData.GetById(addEditCheeseViewModel.CheeseId);
+                Cheese ch = context.Cheeses.Single(c => c.ID == addEditCheeseViewModel.ID);
                 ch.Name = addEditCheeseViewModel.Name;
                 ch.Description = addEditCheeseViewModel.Description;
                 ch.Type = addEditCheeseViewModel.Type;
                 ch.Rating = addEditCheeseViewModel.Rating;
-                
+
+                context.SaveChanges();
 
                 return Redirect("/Cheese/Index");
             }
