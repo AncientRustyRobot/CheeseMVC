@@ -9,18 +9,12 @@ namespace CheeseMVC.Models
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public CheeseCategory Category { get; set; }
-        public int CategoryID { get; set; }
         public int ID { get; set; }
         public int Rating { get; set; }
 
 
-
-        /* public Cheese(string name, string descritpion)
-         {
-             this.Name = name;
-             this.Description = descritpion;
-         }*/       
+        public CheeseCategory Category { get; set; }
+        public int CategoryID { get; set; }
 
     }
     

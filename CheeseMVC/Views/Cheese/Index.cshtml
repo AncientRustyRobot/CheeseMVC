@@ -19,7 +19,7 @@
             <th>Remove</th>
             <th>Name</th>
             <th>Description</th>
-            <th>Type</th>
+            <th>Category</th>
             <th>Rating</th>
             <th>Edit Cheese</th>
 
@@ -31,7 +31,7 @@
                 <td><input name="cheeseIds" type="checkbox" value="@cheese.ID" /></td>
                 <td>@cheese.Name</td>
                 <td>@cheese.Description</td>
-                <td>@cheese.Type</td>
+                <td>@cheese.Category.Name</td>
                 <td>@cheese.Rating</td>
                 <td><a asp-controller="Cheese" asp-action="Edit" asp-route-ID="@cheese.ID">Edit</a></td>
 
