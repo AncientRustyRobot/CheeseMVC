@@ -59,3 +59,5 @@ C:\Users\nancy\codecamp\NancyBampo\CheeseMVC\CheeseMVC\bin\Debug\netcoreapp3.1\M
 C:\Users\nancy\codecamp\NancyBampo\CheeseMVC\CheeseMVC\obj\Debug\netcoreapp3.1\CheeseMVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\nancy\codecamp\NancyBampo\CheeseMVC\CheeseMVC\obj\Debug\netcoreapp3.1\CheeseMVC.csprojAssemblyReference.cache
 C:\Users\nancy\codecamp\NancyBampo\CheeseMVC\CheeseMVC\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\nancy\codecamp\NancyBampo\CheeseMVC\CheeseMVC\obj\Debug\netcoreapp3.1\Razor\Views\Category\Add.cshtml.g.cs
+C:\Users\nancy\codecamp\NancyBampo\CheeseMVC\CheeseMVC\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs

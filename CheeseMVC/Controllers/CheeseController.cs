@@ -82,9 +82,9 @@ namespace CheeseMVC.Controllers
             return Redirect("/Cheese/Index");
         }
 
-        public IActionResult Edit(int cheeseId)
+        public IActionResult Edit(int ID)
         {
-            Cheese ch = context.Cheeses.Single(c => c.ID == cheeseId);
+            Cheese ch = context.Cheeses.Single(c => c.ID == ID);
             AddEditCheeseViewModel addEditCheeseViewModel = new AddEditCheeseViewModel(ch);
             
             return View(addEditCheeseViewModel);
