@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CheeseMVC.Migrations
 {
     [DbContext(typeof(CheeseDbContext))]
-    [Migration("20200110205223_AddMenu")]
-    partial class AddMenu
+    [Migration("20200110213113_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

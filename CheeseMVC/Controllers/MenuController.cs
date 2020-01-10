@@ -81,7 +81,7 @@ namespace CheeseMVC.Controllers
                                .Where(cm => cm.CheeseID == vm.CheeseID)
                                .Where(cm => cm.MenuID == vm.MenuID).ToList();
 
-                if(existingItems.Count == 0)
+                if(existingItems.Count() == 0)
                 {
                     CheeseMenu cMenu = new CheeseMenu
                     {
