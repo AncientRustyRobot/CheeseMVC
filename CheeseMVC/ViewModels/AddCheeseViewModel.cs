@@ -48,21 +48,6 @@ namespace CheeseMVC.ViewModels
 
             }
 
-            /*CheeseTypes.Add(new SelectListItem
-            {
-                Value = ((int) CheeseType.Fake).ToString(),
-                Text =  CheeseType.Fake.ToString()
-            });
-            CheeseTypes.Add(new SelectListItem
-            {
-                Value = ((int)CheeseType.Hard).ToString(),
-                Text = CheeseType.Hard.ToString()
-            });
-            CheeseTypes.Add(new SelectListItem
-            {
-                Value = ((int)CheeseType.Soft).ToString(),
-                Text = CheeseType.Soft.ToString()
-            });*/
         }
 
         public Cheese CreateCheese()
