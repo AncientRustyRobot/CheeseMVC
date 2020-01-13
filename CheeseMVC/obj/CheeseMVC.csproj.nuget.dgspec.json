@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nancy\\codecamp\\NancyBampo\\CheeseMVC\\CheeseMVC\\CheeseMVC.csproj": {}
+    "C:\\Users\\Don\\lc101\\C#\\CheeseMVC\\CheeseMVC\\CheeseMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nancy\\codecamp\\NancyBampo\\CheeseMVC\\CheeseMVC\\CheeseMVC.csproj": {
+    "C:\\Users\\Don\\lc101\\C#\\CheeseMVC\\CheeseMVC\\CheeseMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nancy\\codecamp\\NancyBampo\\CheeseMVC\\CheeseMVC\\CheeseMVC.csproj",
+        "projectUniqueName": "C:\\Users\\Don\\lc101\\C#\\CheeseMVC\\CheeseMVC\\CheeseMVC.csproj",
         "projectName": "CheeseMVC",
-        "projectPath": "C:\\Users\\nancy\\codecamp\\NancyBampo\\CheeseMVC\\CheeseMVC\\CheeseMVC.csproj",
-        "packagesPath": "C:\\Users\\nancy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nancy\\codecamp\\NancyBampo\\CheeseMVC\\CheeseMVC\\obj\\",
+        "projectPath": "C:\\Users\\Don\\lc101\\C#\\CheeseMVC\\CheeseMVC\\CheeseMVC.csproj",
+        "packagesPath": "C:\\Users\\Don\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Don\\lc101\\C#\\CheeseMVC\\CheeseMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nancy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Don\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
