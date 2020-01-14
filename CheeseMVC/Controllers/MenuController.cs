@@ -42,7 +42,7 @@ namespace CheeseMVC.Controllers
                 Menu newMenu = new Menu
                 {
                     Name = vm.Name
-                };
+                };//
                 context.Menus.Add(newMenu);
                 context.SaveChanges();
 
